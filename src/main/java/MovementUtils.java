@@ -30,10 +30,8 @@ public class MovementUtils {
         Position nextPositionNew = new Position(nextPosition.getX(), nextPosition.getY());
         if(pathHistory.contains(nextPositionNew)) {
             pathHistory.get(pathHistory.indexOf(nextPositionNew)).addTimesVisited();
-            System.out.println("existing path");
         } else {
             pathHistory.add(nextPositionNew);
-            System.out.println("New path!");
         }
         player.setPosition(nextPosition);
     }
